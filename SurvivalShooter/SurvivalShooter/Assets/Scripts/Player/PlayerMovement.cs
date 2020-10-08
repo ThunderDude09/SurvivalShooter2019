@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void Awake()
 	{
+
 		floorMask = LayerMask.GetMask("Floor");
 		anim = GetComponent<Animator>();
 		playerRigidbody = GetComponent<Rigidbody>();
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
 		movement = movement.normalized * speed * Time.deltaTime;
 
 		playerRigidbody.MovePosition(transform.position + movement);
+
 	}
 
 	void Turning()

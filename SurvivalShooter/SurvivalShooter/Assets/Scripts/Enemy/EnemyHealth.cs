@@ -1,7 +1,14 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics.Tracing;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
+    public Image healthBar;
+
+
     public int startingHealth = 100;
     public int currentHealth;
     public float sinkSpeed = 2.5f;
@@ -16,6 +23,10 @@ public class EnemyHealth : MonoBehaviour
     bool isDead;
     bool isSinking;
 
+    private void Start()
+    {
+        
+    }
 
     void Awake ()
     {
@@ -25,6 +36,8 @@ public class EnemyHealth : MonoBehaviour
         capsuleCollider = GetComponent <CapsuleCollider> ();
 
         currentHealth = startingHealth;
+
+        
     }
 
 
@@ -45,7 +58,9 @@ public class EnemyHealth : MonoBehaviour
         enemyAudio.Play ();
 
         currentHealth -= amount;
-            
+
+        healthBar.fillAmount = currentHealth / 100.0f;
+
         hitParticles.transform.position = hitPoint;
         hitParticles.Play();
 
@@ -56,8 +71,15 @@ public class EnemyHealth : MonoBehaviour
     }
 
 
-    void Death ()
+    void Death()
     {
+        
+
+        Time.timeScale = 0.5f;
+        Timer myTimer1 = new Timer(.5f, SlowTime);
+
+        TimeManager.instance.timers.Add(myTimer1);
+
         isDead = true;
 
         capsuleCollider.isTrigger = true;
@@ -76,5 +98,15 @@ public class EnemyHealth : MonoBehaviour
         isSinking = true;
         ScoreManager.score += scoreValue;
         Destroy (gameObject, 2f);
+        
+    }
+
+    void SlowTime()
+    {
+        Time.timeScale = 1f;
     }
 }
+
+
+
+

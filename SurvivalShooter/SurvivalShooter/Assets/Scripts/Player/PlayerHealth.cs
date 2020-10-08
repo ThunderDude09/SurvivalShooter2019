@@ -2,10 +2,14 @@
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
-
+using UnityEditor;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public AudioClip HeartBeatClip;
+    public AudioClip HurtClip;
+    public AudioClip menu;
+
     public int startingHealth = 100;
     public int currentHealth;
     public Slider healthSlider;
@@ -25,8 +29,11 @@ public class PlayerHealth : MonoBehaviour
 
     void Awake ()
     {
+
         anim = GetComponent <Animator> ();
         playerAudio = GetComponent <AudioSource> ();
+        playerAudio.clip = menu;
+        playerAudio.loop = false;
         playerMovement = GetComponent <PlayerMovement> ();
         playerShooting = GetComponentInChildren <PlayerShooting> ();
         currentHealth = startingHealth;
@@ -55,7 +62,15 @@ public class PlayerHealth : MonoBehaviour
 
         healthSlider.value = currentHealth;
 
+        playerAudio.clip = HurtClip;
         playerAudio.Play ();
+
+        if(currentHealth <= 30)
+        {
+            playerAudio.clip = HeartBeatClip;
+            playerAudio.loop = true;
+            playerAudio.Play();
+        }
 
         if(currentHealth <= 0 && !isDead)
         {
@@ -66,6 +81,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Death ()
     {
+        Time.timeScale = 0.26f;
         isDead = true;
 
         playerShooting.DisableEffects ();
@@ -73,6 +89,7 @@ public class PlayerHealth : MonoBehaviour
         anim.SetTrigger ("Die");
 
         playerAudio.clip = deathClip;
+        playerAudio.loop = false;
         playerAudio.Play ();
 
         playerMovement.enabled = false;
