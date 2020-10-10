@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
 	private int floorMask;
 	private float camRayLength = 100f;
 
+	[SerializeField]
+	int playerIndex = 1;
+
 	void Awake()
 	{
 
@@ -34,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void Move(float h, float v)
 	{
-
+		transform.Translate(0, 0,Input.GetAxis("Vertical" + playerIndex) * speed * Time.deltaTime);
 		//movement.Set(h, 0f, v);
 		//movement = movement.normalized * speed * Time.deltaTime;
 
@@ -44,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void Turning()
 	{
-		transform.Rotate(0, Input.GetAxis("Horizontal") * speed2 * Time.deltaTime, 0);
+		transform.Rotate(0, Input.GetAxis("Horizontal" + playerIndex) * speed2 * Time.deltaTime, 0);
 		//Ray leftRight = 
 		//Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 		/*RaycastHit floorHit;

@@ -17,7 +17,8 @@ public class PlayerShooting : MonoBehaviour
     Light gunLight;
     float effectsDisplayTime = 0.2f;
 
-
+    [SerializeField]
+    int playerIndex = 1;
     void Awake ()
     {
         shootableMask = LayerMask.GetMask ("Shootable");
@@ -32,12 +33,17 @@ public class PlayerShooting : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-		if(Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
+		if(Input.GetButton ("Jump" + playerIndex) && timer >= timeBetweenBullets && Time.timeScale != 0)
         {
             Shoot ();
         }
 
-        if(timer >= timeBetweenBullets * effectsDisplayTime)
+        if (Input.GetButton("Jump" + playerIndex) && timer >= timeBetweenBullets && Time.timeScale != 0)
+        {
+            Shoot();
+        }
+
+        if (timer >= timeBetweenBullets * effectsDisplayTime)
         {
             DisableEffects ();
         }
