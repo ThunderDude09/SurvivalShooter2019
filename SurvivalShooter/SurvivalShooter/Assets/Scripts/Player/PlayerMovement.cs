@@ -4,6 +4,8 @@ public class PlayerMovement : MonoBehaviour
 {
 	public float speed = 6f;
 
+	public float speed2 = 114f;
+
 	private Vector3 movement;
 	private Animator anim;
 	private Rigidbody playerRigidbody;
@@ -23,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
 		float h = Input.GetAxisRaw("Horizontal");
 		float v = Input.GetAxisRaw("Vertical");
 
+		
+
 		Move(h, v);
 		Turning();
 		Animating(h, v);
@@ -30,17 +34,20 @@ public class PlayerMovement : MonoBehaviour
 
 	void Move(float h, float v)
 	{
-		movement.Set(h, 0f, v);
-		movement = movement.normalized * speed * Time.deltaTime;
 
-		playerRigidbody.MovePosition(transform.position + movement);
+		//movement.Set(h, 0f, v);
+		//movement = movement.normalized * speed * Time.deltaTime;
+
+		//playerRigidbody.MovePosition(transform.position + movement);
 
 	}
 
 	void Turning()
 	{
-		Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-		RaycastHit floorHit;
+		transform.Rotate(0, Input.GetAxis("Horizontal") * speed2 * Time.deltaTime, 0);
+		//Ray leftRight = 
+		//Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+		/*RaycastHit floorHit;
 
 		if (Physics.Raycast(camRay, out floorHit, camRayLength, floorMask)) {
 			Vector3 playerToMouse = floorHit.point - transform.position;
@@ -48,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
 			Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
 			playerRigidbody.MoveRotation(newRotation);
-		}
+		}*/
 	}
 
 	void Animating(float h, float v)
