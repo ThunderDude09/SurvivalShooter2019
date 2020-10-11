@@ -6,6 +6,10 @@ using UnityEditor;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public int PlayerIndex2 = 1;
+
+    //public int startingHealth2 = 100;
+    //public int currentHealth2;
 
     public AudioClip HeartBeatClip;
     public AudioClip HurtClip;
@@ -37,51 +41,61 @@ public class PlayerHealth : MonoBehaviour
         playerAudio.loop = false;
         playerMovement = GetComponent <PlayerMovement> ();
         playerShooting = GetComponentInChildren <PlayerShooting> ();
-        currentHealth = startingHealth;
+        if(PlayerIndex2 == 1)
+        {
+            currentHealth = startingHealth;
+        }
+            
     }
 
 
     void Update ()
     {
-        if(damaged)
+        if (PlayerIndex2 == 1)
         {
-            damageImage.color = flashColour;
+            if (damaged)
+            {
+                damageImage.color = flashColour;
+            }
+            else
+            {
+                damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+            }
+            damaged = false;
         }
-        else
-        {
-            damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
-        }
-        damaged = false;
+        
     }
 
 
-    public void TakeDamage (int amount)
+    public void TakeDamage2 (int amount)
     {
-        damaged = true;
-
-
-        currentHealth -= amount;
-
-        healthSlider.value = currentHealth;
-
-        playerAudio.clip = HurtClip;
-        playerAudio.Play();
-
-
-        if (currentHealth <= 30)
+        if(PlayerIndex2 == 1)
         {
-            playerAudio.clip = HeartBeatClip;
-            playerAudio.loop = true;
+            damaged = true;
+
+
+            currentHealth -= amount;
+
+            healthSlider.value = currentHealth;
+
+            playerAudio.clip = HurtClip;
             playerAudio.Play();
-        }
 
-        if (currentHealth <= 0 && !isDead)
-        {
-            Death();
+
+            if (currentHealth <= 30)
+            {
+                playerAudio.clip = HeartBeatClip;
+                playerAudio.loop = true;
+                playerAudio.Play();
+            }
+
+            if (currentHealth <= 0 && !isDead)
+            {
+                Death();
+            }
         }
 
     }
-
 
     void Death ()
     {
@@ -95,6 +109,23 @@ public class PlayerHealth : MonoBehaviour
         playerAudio.clip = deathClip;
         playerAudio.loop = false;
         playerAudio.Play ();
+
+        playerMovement.enabled = false;
+        playerShooting.enabled = false;
+    }
+
+    void Death2()
+    {
+        //Time.timeScale = 0.26f;
+        isDead = true;
+
+        playerShooting.DisableEffects();
+
+        anim.SetTrigger("Die");
+
+        playerAudio.clip = deathClip;
+        playerAudio.loop = false;
+        playerAudio.Play();
 
         playerMovement.enabled = false;
         playerShooting.enabled = false;

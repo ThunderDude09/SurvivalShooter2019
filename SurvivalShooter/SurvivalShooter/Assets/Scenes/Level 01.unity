@@ -432,14 +432,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 521792411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 544f2064df03e95419b4a5147c506b08, type: 3}
+  m_Script: {fileID: 11500000, guid: a6706fbb6405cd84daff5bb555a1076d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerIndex3: 2
   HeartBeatClip: {fileID: 8300000, guid: 99695aec0ac924547aebb63b104b8a99, type: 3}
   HurtClip: {fileID: 8300000, guid: 9922a12f34d0a084aab32de985459723, type: 3}
   menu: {fileID: 0}
-  startingHealth: 100
-  currentHealth: 100
+  startingHealth2: 100
+  currentHealth2: 100
   healthSlider: {fileID: 1841455182}
   damageImage: {fileID: 152261544}
   deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
@@ -743,9 +744,9 @@ RectTransform:
   m_Father: {fileID: 1114380156}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 752.4, y: 405.7}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -75, y: -62}
   m_SizeDelta: {x: 75, y: 60}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1072118398
@@ -1407,6 +1408,11 @@ PrefabInstance:
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 152261544}
+    - target: {fileID: 114762724205432510, guid: 9e3e72cd89ef44f97afe08f9baaabc18,
+        type: 3}
+      propertyPath: startingHealth2
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e3e72cd89ef44f97afe08f9baaabc18, type: 3}
 --- !u!114 &1299572197 stripped
@@ -1572,7 +1578,7 @@ PrefabInstance:
     - target: {fileID: 4072727653086694943, guid: f3ef4fb46568ca54096ccc7f97fb2f0a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.98
       objectReference: {fileID: 0}
     - target: {fileID: 4072727653086694943, guid: f3ef4fb46568ca54096ccc7f97fb2f0a,
         type: 3}

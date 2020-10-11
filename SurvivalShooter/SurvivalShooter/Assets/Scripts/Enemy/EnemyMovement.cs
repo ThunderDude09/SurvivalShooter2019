@@ -3,19 +3,20 @@ using System.Collections;
 
 public class EnemyMovement : MonoBehaviour
 {
-    /*Transform player2;
-    PlayerHealth playerHealth2;*/
+    Transform player2;
+    PlayerHealth playerHealth2;
 
     Transform player;
     PlayerHealth playerHealth;
     EnemyHealth enemyHealth;
     UnityEngine.AI.NavMeshAgent nav;
 
+    //Transform ClosetPlayer;
 
     void Awake ()
     {
-        /*player2 = GameObject.FindGameObjectWithTag("Player2").transform;
-        playerHealth2 = player2.GetComponent<PlayerHealth>();*/
+        player2 = GameObject.FindGameObjectWithTag("Player2").transform;
+        playerHealth2 = player2.GetComponent<PlayerHealth>();
 
         player = GameObject.FindGameObjectWithTag ("Player").transform;
         playerHealth = player.GetComponent <PlayerHealth> ();
@@ -30,12 +31,14 @@ public class EnemyMovement : MonoBehaviour
         {
             nav.SetDestination (player.position);
         }
+        else if(enemyHealth.currentHealth > 0 )
+        {
+            nav.SetDestination(player2.position);
+        }
         else
         {
             nav.enabled = false;
         }
     }
-
-
 
 }
