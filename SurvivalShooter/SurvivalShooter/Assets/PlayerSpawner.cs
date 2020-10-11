@@ -16,7 +16,7 @@ public class PlayerSpawner : MonoBehaviour
 
     void Spawn()
     {
-        if (Input.GetButton("Jump"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(player, transform.position, transform.rotation);
         }

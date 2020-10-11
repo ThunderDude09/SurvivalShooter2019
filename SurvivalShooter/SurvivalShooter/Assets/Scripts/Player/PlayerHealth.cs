@@ -6,17 +6,10 @@ using UnityEditor;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int Player = 1;
 
     public AudioClip HeartBeatClip;
     public AudioClip HurtClip;
     public AudioClip menu;
-
-
-    /*public int startingHealth2 = 100;
-    public int currentHealth2;
-
-    public Slider healthSlider2;*/
 
     public int startingHealth = 100;
     public int currentHealth;
@@ -92,7 +85,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Death ()
     {
-        Time.timeScale = 0.26f;
+        //Time.timeScale = 0.26f;
         isDead = true;
 
         playerShooting.DisableEffects ();
@@ -108,10 +101,10 @@ public class PlayerHealth : MonoBehaviour
     }
 
 
-    public void RestartLevel ()
+    /*public void RestartLevel ()
     {
         SceneManager.LoadScene (0);
-    }
+    }*/
 
 
     /*currentHealth2 -= amount;
