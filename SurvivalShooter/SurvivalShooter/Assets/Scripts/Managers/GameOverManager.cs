@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Threading;
+using UnityEngine;
 
 public class GameOverManager : MonoBehaviour
 {
     public PlayerHealth playerHealth;
 	public float restartDelay = 5f;
 
-
+    int count1 = 2;
     Animator anim;
 	float restartTimer;
 
@@ -22,11 +23,23 @@ public class GameOverManager : MonoBehaviour
         {
             anim.SetTrigger("GameOver");
 
-			restartTimer += Time.deltaTime;
+            restartTimer += Time.deltaTime;
 
-			if (restartTimer >= restartDelay) {
-				Application.LoadLevel(Application.loadedLevel);
-			}
+            if (restartTimer >= restartDelay)
+            {
+                Application.LoadLevel(Application.loadedLevel);
+            }
+
+            /*if (playerHealth2.currentHealth <= 0)
+            {
+                
+            }*/
+
+            /*if(playerCount == 2)
+            {
+
+            }*/
+            
         }
     }
 }

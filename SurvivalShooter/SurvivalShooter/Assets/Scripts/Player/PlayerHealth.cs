@@ -6,9 +6,17 @@ using UnityEditor;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public int Player = 1;
+
     public AudioClip HeartBeatClip;
     public AudioClip HurtClip;
     public AudioClip menu;
+
+
+    /*public int startingHealth2 = 100;
+    public int currentHealth2;
+
+    public Slider healthSlider2;*/
 
     public int startingHealth = 100;
     public int currentHealth;
@@ -58,24 +66,27 @@ public class PlayerHealth : MonoBehaviour
     {
         damaged = true;
 
+
         currentHealth -= amount;
 
         healthSlider.value = currentHealth;
 
         playerAudio.clip = HurtClip;
-        playerAudio.Play ();
+        playerAudio.Play();
 
-        if(currentHealth <= 30)
+
+        if (currentHealth <= 30)
         {
             playerAudio.clip = HeartBeatClip;
             playerAudio.loop = true;
             playerAudio.Play();
         }
 
-        if(currentHealth <= 0 && !isDead)
+        if (currentHealth <= 0 && !isDead)
         {
-            Death ();
+            Death();
         }
+
     }
 
 
@@ -101,4 +112,12 @@ public class PlayerHealth : MonoBehaviour
     {
         SceneManager.LoadScene (0);
     }
+
+
+    /*currentHealth2 -= amount;
+
+            healthSlider2.value = currentHealth2;
+
+            playerAudio.clip = HurtClip;
+            playerAudio.Play();*/
 }
