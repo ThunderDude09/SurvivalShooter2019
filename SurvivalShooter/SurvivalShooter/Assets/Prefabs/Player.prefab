@@ -5176,6 +5176,7 @@ MonoBehaviour:
   damagePerShot: 20
   timeBetweenBullets: 0.15
   range: 100
+  playerIndex: 1
 --- !u!1 &1841813716941414
 GameObject:
   m_ObjectHideFlags: 0
@@ -5360,6 +5361,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+  speed2: 164
+  playerIndex: 1
 --- !u!82 &8458581427067096636
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5470,6 +5473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeartBeatClip: {fileID: 8300000, guid: 99695aec0ac924547aebb63b104b8a99, type: 3}
   HurtClip: {fileID: 8300000, guid: 9922a12f34d0a084aab32de985459723, type: 3}
+  menu: {fileID: 0}
   startingHealth: 100
   currentHealth: 100
   healthSlider: {fileID: 0}
