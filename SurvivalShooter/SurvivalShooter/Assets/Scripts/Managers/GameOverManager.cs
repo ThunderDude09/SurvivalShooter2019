@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class GameOverManager : MonoBehaviour
 {
+    public PlayerHealth2 playerHealth2;
+
     public PlayerHealth playerHealth;
 	public float restartDelay = 5f;
 
@@ -19,27 +21,30 @@ public class GameOverManager : MonoBehaviour
 
     void Update()
     {
-        /*if (playerHealth.currentHealth <= 0)
+        if (playerHealth.currentHealth <= 0)
         {
-            anim.SetTrigger("GameOver");
-
-            restartTimer += Time.deltaTime;
-
-            if (restartTimer >= restartDelay)
+            if (playerHealth2.currentHealth2 <= 0)
             {
-                Application.LoadLevel(Application.loadedLevel);
+                anim.SetTrigger("GameOver");
+
+                restartTimer += Time.deltaTime;
+
+                if (restartTimer >= restartDelay)
+                {
+                    Application.LoadLevel(Application.loadedLevel);
+                }
+
+                /*if (playerHealth2.currentHealth <= 0)
+                {
+
+                }*/
+
+                /*if(playerCount == 2)
+                {
+
+                }*/
+
             }
-
-            /*if (playerHealth2.currentHealth <= 0)
-            {
-                
-            }*/
-
-            /*if(playerCount == 2)
-            {
-
-            }
-            
-        }*/
+        }
     }
 }

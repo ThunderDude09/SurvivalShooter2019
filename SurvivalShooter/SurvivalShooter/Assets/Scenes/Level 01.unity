@@ -712,6 +712,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 230, z: 0}
+--- !u!1 &695418409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4072727653086694936, guid: f3ef4fb46568ca54096ccc7f97fb2f0a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1775430896}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &695418410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695418409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4713b50e94fb53438a1435aeccf5156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1077429493}
 --- !u!1 &877364867
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,7 +851,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1077429493}
-  - component: {fileID: 1077429494}
   m_Layer: 0
   m_Name: PlayerSpawn
   m_TagString: Untagged
@@ -848,25 +866,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077429492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.65, y: 0, z: -14.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1077429494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1077429492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d30c99783e975740970a2d6da79c642, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4072727653086694936, guid: f3ef4fb46568ca54096ccc7f97fb2f0a, type: 3}
 --- !u!1 &1084502846
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,7 +955,7 @@ GameObject:
   - component: {fileID: 1114380158}
   m_Layer: 5
   m_Name: HUDCanvas
-  m_TagString: Untagged
+  m_TagString: GameOver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1064,6 +1069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c9e0011c2ed97428a4efc03b455359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth2: {fileID: 521792413}
   playerHealth: {fileID: 1299572197}
   restartDelay: 5
 --- !u!95 &1114380159
@@ -1560,6 +1566,11 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 1841455182}
+    - target: {fileID: 4071620030113809072, guid: f3ef4fb46568ca54096ccc7f97fb2f0a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Gun
+      objectReference: {fileID: 0}
     - target: {fileID: 4072269807107798022, guid: f3ef4fb46568ca54096ccc7f97fb2f0a,
         type: 3}
       propertyPath: m_TagString
@@ -2270,6 +2281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a99222b1e4a384e923ac7e86efc709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth2: {fileID: 0}
   playerHealth: {fileID: 1299572197}
   enemy: {fileID: 1719079804300652, guid: 4e3b7f611582d4dc7a9dd318242ed5e3, type: 3}
   spawnTime: 3
@@ -2301,6 +2313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a99222b1e4a384e923ac7e86efc709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth2: {fileID: 521792413}
   playerHealth: {fileID: 1299572197}
   enemy: {fileID: 1819768538276330, guid: ebed7a3ef4be5458fb88a3c3a689c566, type: 3}
   spawnTime: 10
@@ -2318,6 +2331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a99222b1e4a384e923ac7e86efc709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth2: {fileID: 521792413}
   playerHealth: {fileID: 1299572197}
   enemy: {fileID: 1161934229116340, guid: 78e1368557eab4d62a5487e98c1b5c5f, type: 3}
   spawnTime: 3

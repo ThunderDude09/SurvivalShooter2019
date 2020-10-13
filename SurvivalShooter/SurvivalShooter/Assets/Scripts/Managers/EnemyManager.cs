@@ -2,6 +2,8 @@
 
 public class EnemyManager : MonoBehaviour
 {
+    public PlayerHealth2 playerHealth2;
+
     public PlayerHealth playerHealth;
     public GameObject enemy;
     public float spawnTime = 3f;
@@ -16,14 +18,14 @@ public class EnemyManager : MonoBehaviour
 
     void Spawn ()
     {
-        /*if(playerHealth.currentHealth <= 0f)
+        if(playerHealth.currentHealth <= 0f)
         {
-            if(playerHealth.currentHealth2 <= 0f)
+            if(playerHealth2.currentHealth2 <= 0f)
             {
                 return;
             }
             
-        }*/
+        }
 
         int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 

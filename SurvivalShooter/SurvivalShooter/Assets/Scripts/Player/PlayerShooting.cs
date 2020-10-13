@@ -2,6 +2,8 @@
 
 public class PlayerShooting : MonoBehaviour
 {
+    public bool playerActive = false;
+
     public int damagePerShot = 20;
     public float timeBetweenBullets = 0.15f;
     public float range = 100f;
@@ -33,20 +35,28 @@ public class PlayerShooting : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-		if(Input.GetButton ("Jump" + playerIndex) && timer >= timeBetweenBullets && Time.timeScale != 0)
+        if (playerIndex == 1 & playerActive == false)
         {
-            Shoot ();
-        }
 
-        if (Input.GetButton("Jump" + playerIndex) && timer >= timeBetweenBullets && Time.timeScale != 0)
-        {
-            Shoot();
         }
+        else
+        {
+            if (Input.GetButton("Jump" + playerIndex) && timer >= timeBetweenBullets && Time.timeScale != 0)
+            {
+                Shoot();
+            }
 
-        if (timer >= timeBetweenBullets * effectsDisplayTime)
-        {
-            DisableEffects ();
+            if (Input.GetButton("Jump" + playerIndex) && timer >= timeBetweenBullets && Time.timeScale != 0)
+            {
+                Shoot();
+            }
+
+            if (timer >= timeBetweenBullets * effectsDisplayTime)
+            {
+                DisableEffects();
+            }
         }
+        
     }
 
 
@@ -96,5 +106,8 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
-    
+    public void Spawned2()
+    {
+        playerActive = true;
+    }
 }

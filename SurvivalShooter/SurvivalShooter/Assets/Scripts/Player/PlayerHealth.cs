@@ -6,6 +6,7 @@ using UnityEditor;
 
 public class PlayerHealth : MonoBehaviour
 {
+
     public int PlayerIndex2 = 1;
 
     //public int startingHealth2 = 100;
@@ -99,6 +100,11 @@ public class PlayerHealth : MonoBehaviour
 
     void Death ()
     {
+        Time.timeScale = 0.26f;
+        Timer myTimer1 = new Timer(1f, SlowTime);
+
+        TimeManager.instance.timers.Add(myTimer1);
+
         //Time.timeScale = 0.26f;
         isDead = true;
 
@@ -109,23 +115,6 @@ public class PlayerHealth : MonoBehaviour
         playerAudio.clip = deathClip;
         playerAudio.loop = false;
         playerAudio.Play ();
-
-        playerMovement.enabled = false;
-        playerShooting.enabled = false;
-    }
-
-    void Death2()
-    {
-        //Time.timeScale = 0.26f;
-        isDead = true;
-
-        playerShooting.DisableEffects();
-
-        anim.SetTrigger("Die");
-
-        playerAudio.clip = deathClip;
-        playerAudio.loop = false;
-        playerAudio.Play();
 
         playerMovement.enabled = false;
         playerShooting.enabled = false;
@@ -144,4 +133,8 @@ public class PlayerHealth : MonoBehaviour
 
             playerAudio.clip = HurtClip;
             playerAudio.Play();*/
+    void SlowTime()
+    {
+        Time.timeScale = 1f;
+    }
 }

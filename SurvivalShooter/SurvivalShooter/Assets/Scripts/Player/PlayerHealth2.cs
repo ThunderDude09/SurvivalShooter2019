@@ -97,6 +97,11 @@ public class PlayerHealth2 : MonoBehaviour
 
     void Death()
     {
+        Time.timeScale = 0.26f;
+        Timer myTimer1 = new Timer(1f, SlowTime);
+
+        TimeManager.instance.timers.Add(myTimer1);
+
         //Time.timeScale = 0.26f;
         isDead = true;
 
@@ -110,6 +115,11 @@ public class PlayerHealth2 : MonoBehaviour
 
         playerMovement.enabled = false;
         playerShooting.enabled = false;
+    }
+
+    void SlowTime()
+    {
+        Time.timeScale = 1f;
     }
 
 }
