@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class GameOverManager : MonoBehaviour
 {
+    int T
+
+    public bool playerActive4;
+
     public PlayerHealth2 playerHealth2;
 
     public PlayerHealth playerHealth;
@@ -21,66 +25,64 @@ public class GameOverManager : MonoBehaviour
 
     void Update()
     {
+
+        if (playerHealth.currentHealth <= 0)
+        {
+            if (playerActive4 == true)
+            {
+                if (playerHealth2.currentHealth2 <= 0)
+                {
+                    anim.SetTrigger("GameOver");
+
+                    restartTimer += Time.deltaTime;
+
+                    if (restartTimer >= restartDelay)
+                    {
+                        Application.LoadLevel(Application.loadedLevel);
+                    }
+
+                    /*if (playerHealth2.currentHealth <= 0)
+                    {
+
+                    }*/
+
+                    /*if(playerCount == 2)
+                    {
+
+                    }*/
+
+                }
+            }
+            else
+            {
+                if (playerHealth2.currentHealth2 <= 0)
+                {
+                    anim.SetTrigger("GameOver");
+
+                    restartTimer += Time.deltaTime;
+
+                    if (restartTimer >= restartDelay)
+                    {
+                        Application.LoadLevel(Application.loadedLevel);
+                    }
+
+                    /*if (playerHealth2.currentHealth <= 0)
+                    {
+
+                    }*/
+
+                    /*if(playerCount == 2)
+                    {
+
+                    }*/
+
+                }
+            }
+            
+        }
         if (Input.GetKeyDown(KeyCode.T))
         {
-            gameOver1();
-        }
-        else
-        {
-            gameOver2();
-        }
-    }
-
-    void gameOver1()
-    {
-        if (playerHealth.currentHealth <= 0)
-        {
-            if (playerHealth2.currentHealth2 <= 0)
-            {
-                anim.SetTrigger("GameOver");
-
-                restartTimer += Time.deltaTime;
-
-                if (restartTimer >= restartDelay)
-                {
-                    Application.LoadLevel(Application.loadedLevel);
-                }
-
-                /*if (playerHealth2.currentHealth <= 0)
-                {
-
-                }*/
-
-                /*if(playerCount == 2)
-                {
-
-                }*/
-
-            }
-        }
-    }
-    void gameOver2()
-    {
-        if (playerHealth.currentHealth <= 0)
-        {
-            anim.SetTrigger("GameOver");
-
-            restartTimer += Time.deltaTime;
-
-            if (restartTimer >= restartDelay)
-            {
-                Application.LoadLevel(Application.loadedLevel);
-            }
-
-            /*if (playerHealth2.currentHealth <= 0)
-            {
-
-            }*/
-
-            /*if(playerCount == 2)
-            {
-
-            }*/
+            playerActive4 = true;
         }
     }
 }

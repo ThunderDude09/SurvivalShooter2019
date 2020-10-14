@@ -2,8 +2,6 @@
 
 public class EnemyManager : MonoBehaviour
 {
-    public bool playerActive2 = false;
-
     public PlayerHealth2 playerHealth2;
 
     public PlayerHealth playerHealth;
@@ -22,11 +20,7 @@ public class EnemyManager : MonoBehaviour
     {
         if (playerHealth.currentHealth <= 0f)
         {
-            if (playerHealth2.currentHealth2 <= 0f & playerActive2 == false)
-            {
-                return;
-            }
-            else if (playerActive2 == true)
+            if (playerHealth2.currentHealth2 <= 0f)
             {
                 return;
             }
@@ -36,8 +30,5 @@ public class EnemyManager : MonoBehaviour
 
         Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
     }
-    public void Spawned3()
-    {
-        playerActive2 = true;
-    }
+
 }

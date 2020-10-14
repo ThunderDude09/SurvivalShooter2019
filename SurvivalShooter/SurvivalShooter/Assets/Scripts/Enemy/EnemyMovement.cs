@@ -3,6 +3,7 @@ using System.Collections;
 
 public class EnemyMovement : MonoBehaviour
 {
+    bool playerActive3 = false;
 
     Transform player2;
     PlayerHealth2 playerHealth2;
@@ -32,13 +33,19 @@ public class EnemyMovement : MonoBehaviour
         {
             nav.SetDestination(player.position);
         }
-        else if (enemyHealth.currentHealth > 0 && playerHealth2.currentHealth2 > 0)
+        else if (enemyHealth.currentHealth > 0 && playerHealth2.currentHealth2 > 0 && playerActive3 == true)
         {
             nav.SetDestination(player2.position);
         }
-        else
+        else if (playerActive3 == false)
         {
             nav.enabled = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            nav.enabled = true;
+            playerActive3 = true;
         }
     }
 }
