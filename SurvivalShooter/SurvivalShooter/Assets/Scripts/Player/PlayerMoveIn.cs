@@ -6,9 +6,6 @@ public class PlayerMoveIn : MonoBehaviour
 {
 
 
-    GameObject player3;
-    EnemyManager playerSpawned3;
-
     GameObject player2;
     PlayerShooting playerSpawned2;
 
@@ -27,9 +24,6 @@ public class PlayerMoveIn : MonoBehaviour
     void Awake()
     {
 
-        player3 = GameObject.FindGameObjectWithTag("Manager");
-        playerSpawned3 = player3.GetComponent<EnemyManager>();
-
         player2 = GameObject.FindGameObjectWithTag("Gun");
         playerSpawned2 = player2.GetComponent<PlayerShooting>();
 
@@ -46,8 +40,6 @@ public class PlayerMoveIn : MonoBehaviour
             playerSpawned.Spawned();
 
             playerSpawned2.Spawned2();
-
-            playerSpawned3.Spawned3();
 
         }
       

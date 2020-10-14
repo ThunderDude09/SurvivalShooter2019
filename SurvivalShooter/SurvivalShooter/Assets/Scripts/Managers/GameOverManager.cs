@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameOverManager : MonoBehaviour
 {
-    int T
+    int T;
 
     public bool playerActive4;
 
