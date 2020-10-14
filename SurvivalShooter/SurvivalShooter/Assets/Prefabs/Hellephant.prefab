@@ -9740,7 +9740,7 @@ GameObject:
   - component: {fileID: 114290231285748624}
   m_Layer: 9
   m_Name: Hellephant
-  m_TagString: Untagged
+  m_TagString: EMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9957,6 +9957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94f6618a0da65fa45b24d5105d5d8422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerActive: 0
 --- !u!114 &114153904350160260
 MonoBehaviour:
   m_ObjectHideFlags: 0

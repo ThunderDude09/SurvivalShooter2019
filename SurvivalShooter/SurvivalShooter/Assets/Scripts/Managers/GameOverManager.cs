@@ -21,6 +21,18 @@ public class GameOverManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            gameOver1();
+        }
+        else
+        {
+            gameOver2();
+        }
+    }
+
+    void gameOver1()
+    {
         if (playerHealth.currentHealth <= 0)
         {
             if (playerHealth2.currentHealth2 <= 0)
@@ -45,6 +57,30 @@ public class GameOverManager : MonoBehaviour
                 }*/
 
             }
+        }
+    }
+    void gameOver2()
+    {
+        if (playerHealth.currentHealth <= 0)
+        {
+            anim.SetTrigger("GameOver");
+
+            restartTimer += Time.deltaTime;
+
+            if (restartTimer >= restartDelay)
+            {
+                Application.LoadLevel(Application.loadedLevel);
+            }
+
+            /*if (playerHealth2.currentHealth <= 0)
+            {
+
+            }*/
+
+            /*if(playerCount == 2)
+            {
+
+            }*/
         }
     }
 }

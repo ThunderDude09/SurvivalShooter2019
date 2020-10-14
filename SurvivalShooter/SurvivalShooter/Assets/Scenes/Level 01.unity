@@ -2264,7 +2264,7 @@ GameObject:
   - component: {fileID: 2135234549}
   m_Layer: 0
   m_Name: EnemyManager
-  m_TagString: Untagged
+  m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2281,6 +2281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a99222b1e4a384e923ac7e86efc709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerActive2: 0
   playerHealth2: {fileID: 0}
   playerHealth: {fileID: 1299572197}
   enemy: {fileID: 1719079804300652, guid: 4e3b7f611582d4dc7a9dd318242ed5e3, type: 3}
@@ -2313,6 +2314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a99222b1e4a384e923ac7e86efc709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerActive2: 0
   playerHealth2: {fileID: 521792413}
   playerHealth: {fileID: 1299572197}
   enemy: {fileID: 1819768538276330, guid: ebed7a3ef4be5458fb88a3c3a689c566, type: 3}
@@ -2331,6 +2333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a99222b1e4a384e923ac7e86efc709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerActive2: 0
   playerHealth2: {fileID: 521792413}
   playerHealth: {fileID: 1299572197}
   enemy: {fileID: 1161934229116340, guid: 78e1368557eab4d62a5487e98c1b5c5f, type: 3}

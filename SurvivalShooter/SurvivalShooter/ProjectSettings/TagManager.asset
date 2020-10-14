@@ -7,6 +7,8 @@ TagManager:
   - Player2
   - GameOver
   - Gun
+  - Manager
+  - EMove
   layers:
   - Default
   - TransparentFX
