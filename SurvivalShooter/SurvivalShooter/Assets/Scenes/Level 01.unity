@@ -1069,7 +1069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c9e0011c2ed97428a4efc03b455359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerActive4: 0
+  playerActive9: 0
   playerHealth2: {fileID: 521792413}
   playerHealth: {fileID: 1299572197}
   restartDelay: 5
@@ -1560,7 +1560,7 @@ PrefabInstance:
     - target: {fileID: 4072727653086694943, guid: f3ef4fb46568ca54096ccc7f97fb2f0a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.98
+      value: 21.19
       objectReference: {fileID: 0}
     - target: {fileID: 4072727653086694943, guid: f3ef4fb46568ca54096ccc7f97fb2f0a,
         type: 3}
@@ -1570,7 +1570,7 @@ PrefabInstance:
     - target: {fileID: 4072727653086694943, guid: f3ef4fb46568ca54096ccc7f97fb2f0a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -43.02
       objectReference: {fileID: 0}
     - target: {fileID: 4072727653086694943, guid: f3ef4fb46568ca54096ccc7f97fb2f0a,
         type: 3}
@@ -1943,7 +1943,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4fff99673a41e24439d527ad0bd6b569, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 0.106
   m_Pitch: 1
   Loop: 1
   Mute: 0
