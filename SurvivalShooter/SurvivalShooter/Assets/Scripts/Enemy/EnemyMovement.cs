@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyMovement : MonoBehaviour
 {
-    bool playerActive3 = false;
+    bool playerActive21;
 
     Transform player2;
     PlayerHealth2 playerHealth2;
@@ -26,26 +26,31 @@ public class EnemyMovement : MonoBehaviour
         nav = GetComponent <UnityEngine.AI.NavMeshAgent> ();
     }
 
-
-    void Update()
+    private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            playerActive21 = true;
+        }
+
         if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
         {
             nav.SetDestination(player.position);
         }
-        else if (enemyHealth.currentHealth > 0 && playerHealth2.currentHealth2 > 0 && playerActive3 == true)
+        else if (enemyHealth.currentHealth > 0 && playerHealth2.currentHealth2 > 0)
         {
             nav.SetDestination(player2.position);
         }
-        else if (playerActive3 == false)
+        else
         {
             nav.enabled = false;
         }
+        
 
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            nav.enabled = true;
-            playerActive3 = true;
-        }
+        
+
+        
+
+        
     }
 }

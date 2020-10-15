@@ -3,6 +3,8 @@ using System.Collections;
 
 public class EnemyAttack : MonoBehaviour
 {
+    bool playerActive7;
+
     public float timeBetweenAttacks = 0.5f;
     public int attackDamage = 10;
 
@@ -69,7 +71,7 @@ public class EnemyAttack : MonoBehaviour
         {
             Attack2();
         }
-
+        //if()
         if (playerHealth.currentHealth <= 0)
         {
             if(playerHealth2.currentHealth2 <=0)

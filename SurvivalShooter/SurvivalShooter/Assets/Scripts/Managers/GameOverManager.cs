@@ -3,9 +3,7 @@ using UnityEngine;
 
 public class GameOverManager : MonoBehaviour
 {
-    int T;
-
-    public bool playerActive4;
+    public bool playerActive9;
 
     public PlayerHealth2 playerHealth2;
 
@@ -25,32 +23,21 @@ public class GameOverManager : MonoBehaviour
 
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            playerActive9 = true;
+        }
         if (playerHealth.currentHealth <= 0)
         {
-            if (playerActive4 == true)
+            if (playerActive9 == false)
             {
-                if (playerHealth2.currentHealth2 <= 0)
+                anim.SetTrigger("GameOver");
+
+                restartTimer += Time.deltaTime;
+
+                if (restartTimer >= restartDelay)
                 {
-                    anim.SetTrigger("GameOver");
-
-                    restartTimer += Time.deltaTime;
-
-                    if (restartTimer >= restartDelay)
-                    {
-                        Application.LoadLevel(Application.loadedLevel);
-                    }
-
-                    /*if (playerHealth2.currentHealth <= 0)
-                    {
-
-                    }*/
-
-                    /*if(playerCount == 2)
-                    {
-
-                    }*/
-
+                    Application.LoadLevel(Application.loadedLevel);
                 }
             }
             else
@@ -66,23 +53,10 @@ public class GameOverManager : MonoBehaviour
                         Application.LoadLevel(Application.loadedLevel);
                     }
 
-                    /*if (playerHealth2.currentHealth <= 0)
-                    {
-
-                    }*/
-
-                    /*if(playerCount == 2)
-                    {
-
-                    }*/
-
                 }
             }
             
         }
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            playerActive4 = true;
-        }
+        
     }
 }
