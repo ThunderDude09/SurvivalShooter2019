@@ -19,7 +19,7 @@ public class EnemyManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             playerActive6 = true;
         }

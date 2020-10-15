@@ -19,7 +19,7 @@ public class SplitScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.T))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             //ChangeSplitScreen();
             cam1.rect = new Rect(0, 0, 0.5f, 1);

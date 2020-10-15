@@ -23,7 +23,7 @@ public class GameOverManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             playerActive9 = true;
         }

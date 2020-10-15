@@ -28,7 +28,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             playerActive21 = true;
         }

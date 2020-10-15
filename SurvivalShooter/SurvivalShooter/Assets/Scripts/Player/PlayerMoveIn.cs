@@ -34,7 +34,7 @@ public class PlayerMoveIn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.T))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             transform.position = target.position;
             playerSpawned.Spawned();
