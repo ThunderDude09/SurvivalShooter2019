@@ -5273,6 +5273,8 @@ GameObject:
   - component: {fileID: 114291914702536300}
   - component: {fileID: 8458581427067096636}
   - component: {fileID: 114762724205432510}
+  - component: {fileID: 1446422497126689023}
+  - component: {fileID: 5238615340194503817}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5470,6 +5472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeartBeatClip: {fileID: 8300000, guid: 99695aec0ac924547aebb63b104b8a99, type: 3}
   HurtClip: {fileID: 8300000, guid: 9922a12f34d0a084aab32de985459723, type: 3}
+  menu: {fileID: 0}
   startingHealth: 100
   currentHealth: 100
   healthSlider: {fileID: 0}
@@ -5477,6 +5480,40 @@ MonoBehaviour:
   deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
+--- !u!114 &1446422497126689023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873466918661584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
+--- !u!114 &5238615340194503817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873466918661584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  localPositionSensitivity: 0.01
+  localRotationSensitivity: 0.01
+  localScaleSensitivity: 0.01
 --- !u!1 &784956213371412624
 GameObject:
   m_ObjectHideFlags: 0
