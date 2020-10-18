@@ -43,6 +43,9 @@ public class PlayerMovement : NetworkBehaviour
 
 	void Turning()
 	{
+		if (!isLocalPlayer)
+			return;
+
 		Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit floorHit;
 
@@ -57,6 +60,9 @@ public class PlayerMovement : NetworkBehaviour
 
 	void Animating(float h, float v)
 	{
+		if (!isLocalPlayer)
+			return;
+
 		bool walking = h != 0f || v != 0f;
 
 		anim.SetBool("IsWalking", walking);

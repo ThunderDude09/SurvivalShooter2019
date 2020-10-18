@@ -2,7 +2,10 @@
 
 public class EnemyManager : MonoBehaviour
 {
-    public PlayerHealth playerHealth;
+    Transform player;
+    PlayerHealth playerHealth;
+
+    //public PlayerHealth playerHealth;
     public GameObject enemy;
     public float spawnTime = 3f;
     public Transform[] spawnPoints;
@@ -13,13 +16,19 @@ public class EnemyManager : MonoBehaviour
         InvokeRepeating ("Spawn", spawnTime, spawnTime);
     }
 
+    void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerHealth = player.GetComponent<PlayerHealth>();
+    }
+
 
     void Spawn ()
     {
-        if(playerHealth.currentHealth <= 0f)
+        /*if(playerHealth.currentHealth <= 0f)
         {
             return;
-        }
+        }*/
 
         int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 

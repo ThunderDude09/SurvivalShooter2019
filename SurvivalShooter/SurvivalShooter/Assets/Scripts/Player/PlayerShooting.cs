@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
+using Mirror;
 
-public class PlayerShooting : MonoBehaviour
+public class PlayerShooting : NetworkBehaviour
 {
     public int damagePerShot = 20;
     public float timeBetweenBullets = 0.15f;
@@ -30,9 +31,12 @@ public class PlayerShooting : MonoBehaviour
 
     void Update ()
     {
+
         timer += Time.deltaTime;
 
-		if(Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
+        if (!isLocalPlayer)
+            return;
+        if (Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
         {
             Shoot ();
         }
@@ -53,6 +57,8 @@ public class PlayerShooting : MonoBehaviour
 
     void Shoot ()
     {
+        
+
         timer = 0f;
 
         gunAudio.Play ();

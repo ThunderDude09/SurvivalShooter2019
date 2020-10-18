@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 677, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 35
+  controlID: 112
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 36
+  controlID: 113
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 37
+  controlID: 114
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,8 +265,8 @@ MonoBehaviour:
     y: 0
     width: 412
     height: 571
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 19}
@@ -384,7 +384,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 18430
+  m_LastSelectedObjectID: 27798
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -450,20 +450,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts/Player
   m_ViewMode: 1
   m_StartGridSize: 92
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts/Player
   m_LastFoldersGridSize: 92
   m_LastProjectPath: C:\Users\Brayden\Documents\Unity2\SurvivalShooter2019\SurvivalShooter\SurvivalShooter
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e43b0000
-    m_LastClickedID: 15332
-    m_ExpandedIDs: 00000000c83b000000ca9a3b
+    m_SelectedIDs: ec3b0000
+    m_LastClickedID: 15340
+    m_ExpandedIDs: 00000000c83b0000e63b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -614,9 +614,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 562d0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 9eeeffffbaeeffff58f0ffff06f4ffff24f4ffffc4f5ffff62fbffff
+      m_ExpandedIDs: 78b8ffff8e750000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -669,16 +669,16 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: 579085e9babebe74fa59634b9c1a6886
   m_Gizmos: 1
-  m_SceneIsLit: 1
+  m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 5.686969, y: -3.246416, z: 67.31328}
+    m_Target: {x: 1.5409188, y: 0.85482544, z: 0.1906352}
     speed: 2
-    m_Value: {x: 5.686969, y: -3.246416, z: 67.31328}
+    m_Value: {x: 1.5409188, y: 0.85482544, z: 0.1906352}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -691,7 +691,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 0
-    showSkybox: 1
+    showSkybox: 0
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -724,13 +724,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.12596594, y: -0.015773257, z: 0.0020258783, w: -0.9919764}
+    m_Target: {x: 0.024083046, y: -0.7712961, z: 0.029137619, w: 0.63540846}
     speed: 2
-    m_Value: {x: -0.1259573, y: -0.015772175, z: 0.0020257393, w: -0.99190825}
+    m_Value: {x: 0.024082197, y: -0.77126884, z: 0.02913659, w: 0.63538605}
   m_Size:
-    m_Target: 44.48416
+    m_Target: 1.2273622
     speed: 2
-    m_Value: 44.48416
+    m_Value: 1.2273622
   m_Ortho:
     m_Target: 0
     speed: 2
