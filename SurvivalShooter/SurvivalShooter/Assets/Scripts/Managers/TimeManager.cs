@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class TimeManager : MonoBehaviour
+public class TimeManager : NetworkBehaviour
 {
     public static TimeManager instance;
     public List<Timer> timers = new List<Timer>();

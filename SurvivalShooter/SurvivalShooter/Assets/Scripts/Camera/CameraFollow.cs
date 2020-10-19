@@ -16,7 +16,7 @@ public class CameraFollow : NetworkBehaviour
 
 	void Start()
 	{
-		target = GameObject.FindGameObjectWithTag("Player").transform;
+		target = GameObject.Find("Player").transform;
 		offset = transform.position - target.position;
 	}
 
@@ -28,8 +28,7 @@ public class CameraFollow : NetworkBehaviour
 		float h = Input.GetAxisRaw("Horizontal");
 		float v = Input.GetAxisRaw("Vertical");
 		//Vector3 targetCamPos = new Vector3(target.position.x, target.position.y, transform.position.z);
-		//Vector3 targetCamPos = target.position + offset;
-		//transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
-
+		Vector3 targetCamPos = target.position + offset;
+		transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
 	}
 }

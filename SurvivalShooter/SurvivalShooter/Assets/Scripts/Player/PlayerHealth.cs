@@ -45,7 +45,7 @@ public class PlayerHealth : NetworkBehaviour
 
     void Update ()
     {
-        if(damaged)
+        /*if(damaged)
         {
             damageImage.color = flashColour;
         }
@@ -53,7 +53,7 @@ public class PlayerHealth : NetworkBehaviour
         {
             damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
-        damaged = false;
+        damaged = false;*/
     }
 
 
