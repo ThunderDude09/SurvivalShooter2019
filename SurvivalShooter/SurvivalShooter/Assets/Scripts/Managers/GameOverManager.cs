@@ -32,7 +32,7 @@ public class GameOverManager : NetworkBehaviour
 			restartTimer += Time.deltaTime;
 
 			if (restartTimer >= restartDelay) {
-				Application.LoadLevel(Application.loadedLevel);
+				//Application.LoadLevel(Application.loadedLevel);
 			}
         }
     }
