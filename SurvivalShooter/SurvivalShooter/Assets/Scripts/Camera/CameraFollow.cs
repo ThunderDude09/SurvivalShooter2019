@@ -1,15 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class CameraFollow : MonoBehaviour
+public class CameraFollow : NetworkBehaviour
 {
-	public Transform target;
+	Transform target;
 	public float smoothing = 5f;
 
 	private Vector3 offset;
 
-	void Start()
+    void Awake()
+    {
+		target = GameObject.Find("Player").transform;
+	}
+
+    void Start()
 	{
 		offset = transform.position - target.position;
 	}
