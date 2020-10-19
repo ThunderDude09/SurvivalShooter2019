@@ -3,8 +3,9 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using Mirror;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : NetworkBehaviour
 {
     public AudioClip HeartBeatClip;
     public AudioClip HurtClip;
@@ -56,6 +57,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage (int amount)
     {
+        if (!isLocalPlayer)
+            return;
         damaged = true;
 
         currentHealth -= amount;

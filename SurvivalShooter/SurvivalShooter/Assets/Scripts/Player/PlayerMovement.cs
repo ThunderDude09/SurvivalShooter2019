@@ -43,12 +43,13 @@ public class PlayerMovement : NetworkBehaviour
 
 	void Turning()
 	{
-		if (!isLocalPlayer)
-			return;
+		
 
 		Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit floorHit;
 
+		if (!isLocalPlayer)
+			return;
 		if (Physics.Raycast(camRay, out floorHit, camRayLength, floorMask)) {
 			Vector3 playerToMouse = floorHit.point - transform.position;
 			playerToMouse.y = 0f;

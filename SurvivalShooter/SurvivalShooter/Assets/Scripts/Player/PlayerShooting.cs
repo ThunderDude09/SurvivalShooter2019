@@ -34,8 +34,6 @@ public class PlayerShooting : NetworkBehaviour
 
         timer += Time.deltaTime;
 
-        if (!isLocalPlayer)
-            return;
         if (Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
         {
             Shoot ();
@@ -57,7 +55,8 @@ public class PlayerShooting : NetworkBehaviour
 
     void Shoot ()
     {
-        
+        if (!isLocalPlayer)
+            return;
 
         timer = 0f;
 

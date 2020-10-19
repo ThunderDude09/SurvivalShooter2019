@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
+using Mirror;
 
-public class EnemyManager : MonoBehaviour
+public class EnemyManager : NetworkBehaviour
 {
     Transform player;
     PlayerHealth playerHealth;
