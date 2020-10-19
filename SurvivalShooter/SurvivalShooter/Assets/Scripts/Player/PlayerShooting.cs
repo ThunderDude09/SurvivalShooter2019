@@ -55,8 +55,6 @@ public class PlayerShooting : NetworkBehaviour
 
     void Shoot ()
     {
-        if (!isLocalPlayer)
-            return;
 
         timer = 0f;
 

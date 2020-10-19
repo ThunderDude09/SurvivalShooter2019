@@ -12,6 +12,8 @@ public class PlayerHealth : NetworkBehaviour
     public AudioClip menu;
 
     public int startingHealth = 100;
+
+    [SyncVar]
     public int currentHealth;
     public Slider healthSlider;
     public Image damageImage;
@@ -57,8 +59,9 @@ public class PlayerHealth : NetworkBehaviour
 
     public void TakeDamage (int amount)
     {
-        if (!isLocalPlayer)
+        if (!isServer)
             return;
+
         damaged = true;
 
         currentHealth -= amount;
@@ -104,4 +107,5 @@ public class PlayerHealth : NetworkBehaviour
     {
         SceneManager.LoadScene (0);
     }
+
 }

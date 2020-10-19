@@ -5,6 +5,10 @@ using Mirror;
 
 public class CameraFollow : NetworkBehaviour
 {
+	public float speed = 6f;
+
+	private Vector3 movement;
+
 	Transform target;
 	public float smoothing = 5f;
 
@@ -20,8 +24,12 @@ public class CameraFollow : NetworkBehaviour
 	{
 		if (!isLocalPlayer)
 			return;
-		Vector3 targetCamPos = new Vector3(target.position.x, target.position.y, transform.position.z);
+
+		float h = Input.GetAxisRaw("Horizontal");
+		float v = Input.GetAxisRaw("Vertical");
+		//Vector3 targetCamPos = new Vector3(target.position.x, target.position.y, transform.position.z);
 		//Vector3 targetCamPos = target.position + offset;
-		transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
+		//transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
+
 	}
 }
