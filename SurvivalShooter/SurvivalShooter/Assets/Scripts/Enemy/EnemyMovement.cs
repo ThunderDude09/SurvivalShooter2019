@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Mirror;
 
-public class EnemyMovement : NetworkBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     Transform player;
     PlayerHealth playerHealth;

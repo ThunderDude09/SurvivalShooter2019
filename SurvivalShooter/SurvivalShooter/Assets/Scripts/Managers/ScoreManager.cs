@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using Mirror;
 
-public class ScoreManager : NetworkBehaviour
+public class ScoreManager : MonoBehaviour
 {
     public static int score;
 

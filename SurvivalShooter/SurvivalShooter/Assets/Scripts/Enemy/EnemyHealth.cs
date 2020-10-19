@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using UnityEngine;
 using UnityEngine.UI;
-using Mirror;
 
-public class EnemyHealth : NetworkBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     public Image healthBar;
 

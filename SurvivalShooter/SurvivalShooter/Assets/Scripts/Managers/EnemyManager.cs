@@ -19,7 +19,7 @@ public class EnemyManager : NetworkBehaviour
 
     void Awake()
     {
-        player = GameObject.Find("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         playerHealth = player.GetComponent<PlayerHealth>();
     }
 
@@ -28,7 +28,6 @@ public class EnemyManager : NetworkBehaviour
     {
         if(playerHealth.currentHealth <= 0f)
         {
-            Debug.Log("NoEnemies");
             return;
         }
 

@@ -1,12 +1,8 @@
 ﻿using UnityEngine;
-using Mirror;
 
-public class GameOverManager : NetworkBehaviour
+public class GameOverManager : MonoBehaviour
 {
-    Transform player;
-    PlayerHealth playerHealth;
-
-    //public PlayerHealth playerHealth;
+    public PlayerHealth playerHealth;
 	public float restartDelay = 5f;
 
 
@@ -16,9 +12,6 @@ public class GameOverManager : NetworkBehaviour
 
     void Awake()
     {
-        player = GameObject.Find("Player").transform;
-        playerHealth = player.GetComponent<PlayerHealth>();
-
         anim = GetComponent<Animator>();
     }
 
