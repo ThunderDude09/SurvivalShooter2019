@@ -5,15 +5,10 @@ using Mirror;
 
 public class CameraFollow : NetworkBehaviour
 {
-	Transform target;
+	public Transform target;
 	public float smoothing = 5f;
 
 	private Vector3 offset;
-
-    void Awake()
-    {
-		target = GameObject.Find("Player").transform;
-	}
 
     void Start()
 	{

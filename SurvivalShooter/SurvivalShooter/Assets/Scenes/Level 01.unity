@@ -1357,6 +1357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b7d881b999e84dd9b2a355ed698e352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   target: {fileID: 0}
   smoothing: 5
 --- !u!1 &1962775784

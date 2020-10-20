@@ -2,7 +2,7 @@
 
 public class GameOverManager : MonoBehaviour
 {
-    public PlayerHealth playerHealth;
+    //public PlayerHealth playerHealth;
 	public float restartDelay = 5f;
 
 
@@ -18,6 +18,7 @@ public class GameOverManager : MonoBehaviour
 
     void Update()
     {
+        PlayerHealth playerHealth = gameObject.GetComponent<PlayerHealth>();
         if (playerHealth.currentHealth <= 0)
         {
             anim.SetTrigger("GameOver");
@@ -25,7 +26,7 @@ public class GameOverManager : MonoBehaviour
 			restartTimer += Time.deltaTime;
 
 			if (restartTimer >= restartDelay) {
-				Application.LoadLevel(Application.loadedLevel);
+				//Application.LoadLevel(Application.loadedLevel);
 			}
         }
     }
