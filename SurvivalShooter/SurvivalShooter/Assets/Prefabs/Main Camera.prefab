@@ -108,6 +108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  target: {fileID: 4735207576911020, guid: 9e3e72cd89ef44f97afe08f9baaabc18, type: 3}
+  smoothing: 5
 --- !u!114 &4352568626748089127
 MonoBehaviour:
   m_ObjectHideFlags: 0
