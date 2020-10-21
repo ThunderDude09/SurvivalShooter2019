@@ -15,8 +15,6 @@ ScriptsOnlyBuild:
     - TimeManager
     Mirror.Components.dll:
     - Mirror.NetworkTransform
-    Mirror.Editor.dll:
-    - Mirror.NetworkBehaviourInspector
     Mirror.dll:
     - Mirror.NetworkIdentity
     - Mirror.NetworkManager
@@ -318,7 +316,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: a1cd3578758b4c9cb8c26ca3acc616f4
+      Hash: 5c397a63f8eb794f02174937cf0a5928
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyManager
@@ -498,7 +496,7 @@ ScriptsOnlyBuild:
     className: NetworkRigidbody
   - hash:
       serializedVersion: 2
-      Hash: 7c7137be593ffe5509a041f2255ced19
+      Hash: 88af92d2e01a007450f3e329b5b5da0c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyAttack

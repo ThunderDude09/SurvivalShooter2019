@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : NetworkBehaviour
 {
     public Image healthBar;
 
@@ -43,6 +44,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Update ()
     {
+
         if(isSinking)
         {
             transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
