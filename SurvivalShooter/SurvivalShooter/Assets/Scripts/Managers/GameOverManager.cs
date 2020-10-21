@@ -18,7 +18,7 @@ public class GameOverManager : MonoBehaviour
 
     void Update()
     {
-        PlayerHealth playerHealth = gameObject.GetComponent<PlayerHealth>();
+        /*PlayerHealth playerHealth = gameObject.GetComponent<PlayerHealth>();
         if (playerHealth.currentHealth <= 0)
         {
             anim.SetTrigger("GameOver");
@@ -28,6 +28,6 @@ public class GameOverManager : MonoBehaviour
 			if (restartTimer >= restartDelay) {
 				//Application.LoadLevel(Application.loadedLevel);
 			}
-        }
+        }*/
     }
 }

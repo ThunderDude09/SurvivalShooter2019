@@ -3,23 +3,28 @@ using Mirror;
 
 public class EnemyManager : NetworkBehaviour
 {
-    //public PlayerHealth playerHealth;
+    public PlayerHealth playerHealth;
     public GameObject enemy;
     public float spawnTime = 3f;
     public Transform[] spawnPoints;
 
-
+    
     void Start ()
     {
-        GameObject Player = GameObject.Find("Player");
-        PlayerHealth playerHealth = Player.GetComponent<PlayerHealth>();
+        //NetworkServer.Spawn(enemy);
+        //GameObject Player = GameObject.Find("Player");
+        //PlayerHealth playerHealth = Player.GetComponent<PlayerHealth>();
+
         InvokeRepeating ("Spawn", spawnTime, spawnTime);
     }
 
-
+    private void Update()
+    {
+        //InvokeRepeating("Spawn", spawnTime, spawnTime);
+    }
     void Spawn ()
     {
-        PlayerHealth playerHealth = gameObject.GetComponent<PlayerHealth>();
+        //PlayerHealth playerHealth = gameObject.GetComponent<PlayerHealth>();
         if (playerHealth.currentHealth <= 0f)
         {
             Debug.Log("NoEnemies");
