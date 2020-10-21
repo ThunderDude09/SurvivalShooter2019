@@ -5173,6 +5173,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27c63be2a8918c741863160b9d9da122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  playerMovement: {fileID: 114291914702536300}
   damagePerShot: 20
   timeBetweenBullets: 0.15
   range: 100
@@ -5361,6 +5364,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec45203ae7a1a54c9d02c355f983833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   speed: 6
 --- !u!82 &8458581427067096636
 AudioSource:

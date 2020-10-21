@@ -15,6 +15,8 @@ ScriptsOnlyBuild:
     - TimeManager
     Mirror.Components.dll:
     - Mirror.NetworkTransform
+    Mirror.Editor.dll:
+    - Mirror.NetworkBehaviourInspector
     Mirror.dll:
     - Mirror.NetworkIdentity
     - Mirror.NetworkManager
@@ -25,10 +27,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -90,9 +90,9 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11164}
+      Script: {instanceID: 11180}
     - Class: 114
-      Script: {instanceID: 11182}
+      Script: {instanceID: 11184}
     - Class: 114
       Script: {instanceID: 11258}
     - Class: 114
@@ -192,16 +192,16 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 4bc4346a71a8df53a6b106f68ef3a190
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: CanvasScaler
-  - hash:
-      serializedVersion: 2
       Hash: dac362aec30e75b5bdfe3eea60cdf384
     assemblyName: Mirror.dll
     namespaceName: Mirror
     className: TelepathyTransport
+  - hash:
+      serializedVersion: 2
+      Hash: 4bc4346a71a8df53a6b106f68ef3a190
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: CanvasScaler
   - hash:
       serializedVersion: 2
       Hash: c42672c997f8be6b1aa86a927ebea785
@@ -228,7 +228,7 @@ ScriptsOnlyBuild:
     className: NetworkManagerHUD
   - hash:
       serializedVersion: 2
-      Hash: ee45ca5423f3eb24c2da9772be788f34
+      Hash: 1f04408f55440e55eab41c637342eec5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameOverManager
@@ -318,7 +318,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 8c3695fe9d1cce0d0da3d9156fe5aadb
+      Hash: a1cd3578758b4c9cb8c26ca3acc616f4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyManager
@@ -360,7 +360,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: a4bc76f464f54834a3a2c23124c982bd
+      Hash: fc7de4eacefb612d6ff93c5bfc4e7b17
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerShooting
@@ -678,7 +678,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: fd54311ad2a43461d443d5b0b46eed95
+      Hash: 6fd2bb55b3ee5edb6040a1c5bccd0e07
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraFollow

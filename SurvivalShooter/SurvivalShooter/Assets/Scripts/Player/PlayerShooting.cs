@@ -4,6 +4,7 @@ using Mirror;
 public class PlayerShooting : NetworkBehaviour
 {
     GameObject player;
+    public PlayerMovement playerMovement;
 
     public int damagePerShot = 20;
     public float timeBetweenBullets = 0.15f;
@@ -33,6 +34,8 @@ public class PlayerShooting : NetworkBehaviour
 
     void Update ()
     {
+        if (!playerMovement.isLocalPlayer)
+            return;
         //PlayerMovement playerMovement = gameObject.GetComponent<PlayerMovement>();
         //if (!isLocalPlayer)
             //return;
