@@ -4,6 +4,9 @@ using Mirror;
 
 public class EnemyMovement : NetworkBehaviour
 {
+    GameObject player1;
+    public PlayerMovement playerMovement;
+
     Transform player;
     PlayerHealth playerHealth;
     EnemyHealth enemyHealth;
@@ -21,8 +24,10 @@ public class EnemyMovement : NetworkBehaviour
 
     void Update ()
     {
+        if (isServer)
+            return;
 
-        if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
+        if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
         {
             nav.SetDestination (player.position);
         }

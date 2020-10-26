@@ -5131,6 +5131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94f6618a0da65fa45b24d5105d5d8422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  playerMovement: {fileID: 114291914702536300, guid: 9e3e72cd89ef44f97afe08f9baaabc18,
+    type: 3}
 --- !u!114 &114245940197838398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5143,6 +5147,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e15099f5ee559584089d5851df572def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  playerMovement: {fileID: 114291914702536300, guid: 9e3e72cd89ef44f97afe08f9baaabc18,
+    type: 3}
   timeBetweenAttacks: 0.5
   attackDamage: 10
 --- !u!114 &114491779595983746
@@ -5157,6 +5165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b9d14572410594cb85d40eedfb150c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   healthBar: {fileID: 7077880748067139261}
   startingHealth: 100
   currentHealth: 0
@@ -5176,7 +5186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneId: 0
-  serverOnly: 0
+  serverOnly: 1
   m_AssetId: 
   hasSpawned: 0
 --- !u!114 &5762383437587841492

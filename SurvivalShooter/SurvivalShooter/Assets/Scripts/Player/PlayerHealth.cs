@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEditor;
 using Mirror;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : NetworkBehaviour
 {
     public AudioClip HeartBeatClip;
     public AudioClip HurtClip;
@@ -44,6 +44,8 @@ public class PlayerHealth : MonoBehaviour
 
     void Update ()
     {
+        if (!isLocalPlayer)
+            return;
         if(damaged)
         {
             damageImage.color = flashColour;

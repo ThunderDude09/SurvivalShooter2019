@@ -4,6 +4,8 @@ using Mirror;
 
 public class EnemyAttack : NetworkBehaviour
 {
+    public PlayerMovement playerMovement;
+
     public float timeBetweenAttacks = 0.5f;
     public int attackDamage = 10;
 
@@ -45,6 +47,8 @@ public class EnemyAttack : NetworkBehaviour
 
     void Update ()
     {
+        if (!playerMovement.isLocalPlayer)
+            return;
         timer += Time.deltaTime;
 
         if(timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0)

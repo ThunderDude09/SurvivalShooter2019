@@ -5480,8 +5480,10 @@ MonoBehaviour:
   menu: {fileID: 0}
   startingHealth: 100
   currentHealth: 100
-  healthSlider: {fileID: 0}
-  damageImage: {fileID: 0}
+  healthSlider: {fileID: 7162594449208999696, guid: 849ef887db96fbc4fb2383abe1398743,
+    type: 3}
+  damageImage: {fileID: 8084562743286111918, guid: 0a69ae962f5e847419da30746d693537,
+    type: 3}
   deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}

@@ -20,6 +20,7 @@ public class EnemyManager : NetworkBehaviour
 
     private void Update()
     {
+        
         //InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
     void Spawn ()
