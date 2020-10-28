@@ -12,7 +12,7 @@ public class PlayerHealth : NetworkBehaviour
     public AudioClip menu;
 
     public int startingHealth = 100;
-
+    [SyncVar]
     public int currentHealth;
     public Slider healthSlider;
     public Image damageImage;
@@ -44,8 +44,8 @@ public class PlayerHealth : NetworkBehaviour
 
     void Update ()
     {
-        if (!isLocalPlayer)
-            return;
+        //if (!isLocalPlayer)
+            //return;
         if(damaged)
         {
             damageImage.color = flashColour;

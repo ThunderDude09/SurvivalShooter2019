@@ -3,6 +3,9 @@ using Mirror;
 
 public class EnemyManager : NetworkBehaviour
 {
+    GameObject player;
+    public PlayerMovement playerMovement;
+
     public PlayerHealth playerHealth;
     public GameObject enemy;
     public float spawnTime = 3f;
@@ -20,7 +23,8 @@ public class EnemyManager : NetworkBehaviour
 
     private void Update()
     {
-        
+        if (!playerMovement.isLocalPlayer)
+            return;
         //InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
     void Spawn ()

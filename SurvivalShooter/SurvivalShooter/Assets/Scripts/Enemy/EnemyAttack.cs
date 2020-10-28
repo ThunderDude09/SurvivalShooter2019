@@ -4,7 +4,7 @@ using Mirror;
 
 public class EnemyAttack : NetworkBehaviour
 {
-    public PlayerMovement playerMovement;
+    
 
     public float timeBetweenAttacks = 0.5f;
     public int attackDamage = 10;
@@ -17,6 +17,7 @@ public class EnemyAttack : NetworkBehaviour
     bool playerInRange;
     float timer;
 
+    public PlayerMovement playerMovement;
 
     void Awake ()
     {

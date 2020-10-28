@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  playerMovement: {fileID: 114291914702536300, guid: 9e3e72cd89ef44f97afe08f9baaabc18,
+    type: 3}
   playerHealth: {fileID: 114762724205432510, guid: 9e3e72cd89ef44f97afe08f9baaabc18,
     type: 3}
   enemy: {fileID: 1719079804300652, guid: 4e3b7f611582d4dc7a9dd318242ed5e3, type: 3}
@@ -67,6 +69,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  playerMovement: {fileID: 114291914702536300, guid: 9e3e72cd89ef44f97afe08f9baaabc18,
+    type: 3}
   playerHealth: {fileID: 114762724205432510, guid: 9e3e72cd89ef44f97afe08f9baaabc18,
     type: 3}
   enemy: {fileID: 1161934229116340, guid: 78e1368557eab4d62a5487e98c1b5c5f, type: 3}
@@ -87,6 +91,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  playerMovement: {fileID: 114291914702536300, guid: 9e3e72cd89ef44f97afe08f9baaabc18,
+    type: 3}
   playerHealth: {fileID: 114762724205432510, guid: 9e3e72cd89ef44f97afe08f9baaabc18,
     type: 3}
   enemy: {fileID: 1819768538276330, guid: ebed7a3ef4be5458fb88a3c3a689c566, type: 3}

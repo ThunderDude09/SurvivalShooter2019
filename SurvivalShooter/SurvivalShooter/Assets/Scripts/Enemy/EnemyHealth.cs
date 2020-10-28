@@ -8,9 +8,12 @@ using Mirror;
 public class EnemyHealth : NetworkBehaviour
 {
     public Image healthBar;
+    GameObject player;
+    public PlayerMovement playerMovement;
 
 
     public int startingHealth = 100;
+    [SyncVar]
     public int currentHealth;
     public float sinkSpeed = 2.5f;
     public int scoreValue = 10;
@@ -44,6 +47,8 @@ public class EnemyHealth : NetworkBehaviour
 
     void Update ()
     {
+        if (!playerMovement.isLocalPlayer)
+            return;
 
         if(isSinking)
         {

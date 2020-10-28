@@ -24,8 +24,8 @@ public class EnemyMovement : NetworkBehaviour
 
     void Update ()
     {
-        if (isServer)
-            return;
+        //if (isServer)
+            //return;
 
         if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
         {
